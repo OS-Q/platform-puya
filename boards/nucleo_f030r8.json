@@ -1,0 +1,47 @@
+{
+  "build": {
+    "core": "stm32",
+    "cpu": "cortex-m0",
+    "extra_flags": "-DSTM32F030x8",
+    "f_cpu": "48000000L",
+    "mcu": "stm32f030r8t6",
+    "product_line": "STM32F030x8",
+    "variant": "STM32F0xx/F030R8T"
+  },
+  "debug": {
+    "default_tools": [
+      "stlink"
+    ],
+    "jlink_device": "STM32F030R8",
+    "onboard_tools": [
+      "stlink"
+    ],
+    "openocd_board": "st_nucleo_f0",
+    "openocd_target": "stm32f0x",
+    "svd_path": "STM32F030.svd"
+  },
+  "frameworks": [
+    "arduino",
+    "cmsis",
+    "mbed",
+    "spl",
+    "stm32cube",
+    "libopencm3",
+    "zephyr"
+  ],
+  "name": "ST Nucleo F030R8",
+  "upload": {
+    "maximum_ram_size": 8192,
+    "maximum_size": 65536,
+    "protocol": "stlink",
+    "protocols": [
+      "jlink",
+      "cmsis-dap",
+      "stlink",
+      "blackmagic",
+      "mbed"
+    ]
+  },
+  "url": "https://developer.mbed.org/platforms/ST-Nucleo-F030R8/",
+  "vendor": "ST"
+}

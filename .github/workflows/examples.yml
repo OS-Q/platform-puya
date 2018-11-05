@@ -1,0 +1,46 @@
+name: examples
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+      - '**.rst'
+      - 'LICENSE'
+      - '.gitignore'
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        example:
+          - "arduino-blink"
+          - "cmsis-blink"
+          - "spl-blink"
+          # - "libopencm3-blink"
+          - "stm32cube-hal-blink"
+          - "zephyr-blink"
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.OSQ_REPO_TOKEN }}
+          submodules: "recursive"
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          pip install -U https://github.com/OS-Q/pio/archive/main.zip
+          pio pkg install --global --platform symlink://.
+
+      - name: Build examples
+        working-directory: examples
+        run: |
+          pio run -d ${{ matrix.example }}
