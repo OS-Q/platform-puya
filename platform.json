@@ -61,6 +61,12 @@
       "homepage": "https://www.st.com/en/ecosystems/stm32cube.html",
       "title": "STM32Cube"
     },
+    "puya": {
+      "script": "builder/frameworks/puya.py",
+      "description": "STM32Cube embedded software libraries, including: The HAL hardware abstraction layer, enabling portability between different STM32 devices via standardized API calls; The Low-Layer (LL) APIs, a light-weight, optimized, expert oriented set of APIs designed for both performance and runtime efficiency",
+      "homepage": "https://github.com/OS-Q/framework-puya",
+      "title": "Puya"
+    },
     "zephyr": {
       "package": "framework-zephyr",
       "script": "builder/frameworks/zephyr.py",
@@ -134,6 +140,11 @@
       "owner": "platformio",
       "version": "~3.1.1"
     },
+    "framework-puya": {
+      "type": "framework",
+      "optional": true,
+      "version": "https://github.com/OS-Q/framework-puya.git"
+    },
     "framework-stm32cubef0": {
       "type": "framework",
       "optional": true,
@@ -203,8 +214,7 @@
     },
     "tool-ldscripts-ststm32": {
       "optional": true,
-      "owner": "platformio",
-      "version": "~0.2.0"
+      "version": "https://github.com/OS-Q/ldscripts-ststm32.git"
     }
   }
 }

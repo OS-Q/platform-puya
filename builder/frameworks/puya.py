@@ -1,11 +1,10 @@
 """
-STM32Cube HAL
+Puya HAL
 
-STM32Cube embedded software libraries, including:
+Puya embedded software libraries, including:
 The HAL hardware abstraction layer, enabling portability between different STM32 devices via standardized API calls
 The Low-Layer (LL) APIs, a light-weight, optimized, expert oriented set of APIs designed for both performance and runtime efficiency.
 
-http://www.st.com/en/embedded-software/stm32cube-embedded-software.html?querycriteria=productId=LN1897
 """
 
 import os
@@ -28,8 +27,8 @@ MCU_FAMILY = MCU[0:7]
 PRODUCT_LINE = board.get("build.product_line", "")
 assert PRODUCT_LINE, "Missing MCU or Product Line field"
 
-FRAMEWORK_DIR = platform.get_package_dir("framework-stm32cube%s" % MCU[5:7])
-LDSCRIPTS_DIR = platform.get_package_dir("tool-ldscripts-ststm32")
+FRAMEWORK_DIR = platform.get_package_dir("framework-puya")
+LDSCRIPTS_DIR = platform.get_package_dir("framework-puya")
 assert all(os.path.isdir(d) for d in (FRAMEWORK_DIR, LDSCRIPTS_DIR))
 
 

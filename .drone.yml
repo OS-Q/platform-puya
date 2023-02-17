@@ -14,6 +14,6 @@ steps:
   - pio run -d examples/cmsis-blink
   - pio run -d examples/libopencm3-blink
   - pio run -d examples/mbed-serial
-  - pio run -d examples/stm32cube-hal-blink
+  - pio run -d examples/hal-blink
   - pio run -d examples/zephyr-blink
 

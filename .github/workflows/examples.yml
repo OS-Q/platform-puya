@@ -20,6 +20,7 @@ jobs:
           - "cmsis-blink"
           - "spl-blink"
           # - "libopencm3-blink"
+          # - "hal-blink"
           - "stm32cube-hal-blink"
           - "zephyr-blink"
         os: [ubuntu-latest, windows-latest, macos-latest]
