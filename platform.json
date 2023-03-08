@@ -1,6 +1,6 @@
 {
   "name": "Puya",
-  "title": "Puya PY32F0 Family",
+  "title": "Puya PY32F0xx MCU",
   "description": "The PY32F0xx family of 32-bit Flash MCUs based on the ARM Cortex-M0 processor.",
   "homepage": "https://www.puyasemi.com",
   "license": "Apache-2.0",
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "https://github.com/OS-Q/platform-puya.git"
   },
-  "version": "15.4.1",
+  "version": "1.0.0",
   "frameworks": {
     "mbed": {
       "package": "framework-mbed",

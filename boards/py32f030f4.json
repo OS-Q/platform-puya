@@ -2,29 +2,29 @@
   "build": {
     "core": "puya",
     "cpu": "cortex-m0",
-    "extra_flags": "-DSTM32F030x6",
+    "extra_flags": "-DPY32F030x6",
     "f_cpu": "24000000L",
-    "mcu": "stm32f030f4p6",
-    "product_line": "STM32F030x6",
-    "variant": "STM32F0xx/F030F4P"
+    "mcu": "py32f030f4",
+    "product_line": "PY32F030x6",
+    "variant": "PY32F0xx/F030F4P"
   },
   "debug": {
-    "jlink_device": "STM32F030F4",
+    "jlink_device": "PY32F030F4",
     "openocd_target": "stm32f0x",
-    "svd_path": "STM32F030.svd"
+    "svd_path": "PY32F030.svd"
   },
   "frameworks": [
     "arduino",
     "cmsis",
     "spl",
-    "stm32cube",
+    "puya",
     "libopencm3"
   ],
   "name": "PY32F030F4",
   "upload": {
-    "maximum_ram_size": 4096,
-    "maximum_size": 16384,
-    "protocol": "stlink",
+    "maximum_ram_size": 3072,
+    "maximum_size": 20480,
+    "protocol": "cmsis-dap",
     "protocols": [
       "jlink",
       "cmsis-dap",

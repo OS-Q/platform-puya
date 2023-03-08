@@ -33,7 +33,7 @@
   "upload": {
     "maximum_ram_size": 8192,
     "maximum_size": 65536,
-    "protocol": "stlink",
+    "protocol": "cmsis-dap",
     "protocols": [
       "jlink",
       "cmsis-dap",

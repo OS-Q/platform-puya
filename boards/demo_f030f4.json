@@ -20,11 +20,11 @@
     "stm32cube",
     "libopencm3"
   ],
-  "name": "Demo F030F4",
+  "name": "STM32F030F4",
   "upload": {
     "maximum_ram_size": 4096,
     "maximum_size": 16384,
-    "protocol": "stlink",
+    "protocol": "cmsis-dap",
     "protocols": [
       "jlink",
       "cmsis-dap",
